@@ -2,7 +2,7 @@ import flet as ft
 from custom_checkbox import Checkbox
 
 def main(page: ft.Page):
-    page.title = "Judson Palmer" #titulo'
+    page.title = "Judson Palmer 2" #titulo'
     page.window.width = 500 #tamanho da largura
     page.window.height = 650 #tamanho da altura
     page.padding = ft.padding.only(left=10, right=10, top=10, bottom=20) #espaçamento
