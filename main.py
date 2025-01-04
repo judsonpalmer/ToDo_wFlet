@@ -2,11 +2,11 @@ import flet as ft
 from custom_checkbox import Checkbox
 
 def main(page: ft.Page):
-    page.title = "Bem vindo ao app do Café com Palmer" #titulo'
+    page.title = "Judson Palmer" #titulo'
     page.window.width = 500 #tamanho da largura
     page.window.height = 650 #tamanho da altura
     page.padding = ft.padding.only(left=10, right=10, top=10, bottom=20) #espaçamento
-    page.theme_mode = ft.ThemeMode.LIGHT
+    page.theme_mode = ft.ThemeMode.DARK
     def add_task(e):
         print(f'\033[33m {new_task.value}\033[0m')
         task_list.controls.append(Checkbox(text=new_task.value))
