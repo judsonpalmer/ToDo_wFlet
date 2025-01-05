@@ -5,10 +5,9 @@ class Checkbox(ft.Row):
         super().__init__()
         self.text_view = ft.Text(text)
         self.text_edit = ft.TextField(text, visible=False)
-        self.edit_button = ft.IconButton(icon=ft.icons.EDIT, on_click=self.edit)
+        self.edit_button = ft.IconButton(icon=ft.icons.EDIT, icon_color='yellow', on_click=self.edit)
         self.save_button = ft.IconButton(icon=ft.icons.SAVE, on_click=self.save, visible=False)
-        self.delete_button = ft.IconButton(icon=ft.icons.DELETE, on_click=self.delete)
-        
+        self.delete_button = ft.IconButton(icon=ft.icons.DELETE, icon_color='red', on_click=self.delete)
         self.controls.extend([
                             ft.Checkbox(),
                             self.text_view,
@@ -17,6 +16,7 @@ class Checkbox(ft.Row):
                             self.save_button,
                             self.delete_button
         ])
+
         
     def edit(self, e):
         self.text_view.visible = False
@@ -32,11 +32,10 @@ class Checkbox(ft.Row):
         self.edit_button.visible = True
         self.save_button.visible = False
         self.delete_button.visible = True
-        print(f' ======e=== {self.text_edit.value}')
-        print(f' ++++v++ {self.text_view.value}')
+        self.text_view.value = self.text_edit.value
+        self.update()
         ### Eu preciso que o valor de text_edit seja atualziado com o valor de text_edit
         ### Rode o programa, teste tentar editar valores e você vai entender :)
-        self.update()
     
     def delete(self, e):
         pass
