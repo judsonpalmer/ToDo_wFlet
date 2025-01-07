@@ -34,8 +34,8 @@ class Checkbox(ft.Row):
         self.delete_button.visible = True
         self.text_view.value = self.text_edit.value
         self.update()
-        ### Eu preciso que o valor de text_edit seja atualziado com o valor de text_edit
-        ### Rode o programa, teste tentar editar valores e você vai entender :)
     
     def delete(self, e):
+        self.visible = False
+        self.update()
         pass
