@@ -32,6 +32,8 @@ class Checkbox(ft.Row):
         self.edit_button.visible = True
         self.save_button.visible = False
         self.delete_button.visible = True
+        if self.text_edit.value = "":
+            return
         self.text_view.value = self.text_edit.value
         self.update()
     
